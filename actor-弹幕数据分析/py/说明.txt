@@ -1,0 +1,97 @@
+https://mfm.video.qq.com/danmu?target_id=5979258600&vid=f0034cqed1f&timestamp=15
+
+json数据一般在XHR或者是js里面
+
+https://mfm.video.qq.com/danmu?
+otype=json&
+callback=jQuery19107073029312526762_1607087251908&
+target_id=5979258600    %26
+vid %3D  f0034cqed1f &
+session_key=0%2C0%2C0&
+timestamp=15&
+_=1607087251912
+
+https://mfm.video.qq.com/danmu?
+otype=json
+&callback=jQuery19107776499041162028_1607088438681&
+target_id=5979258600    %26
+vid %3D  f0034cqed1f &
+session_key=928808%2C7180%2C1607088445&
+timestamp=1755&
+_=1607088438696
+https://mfm.video.qq.com/danmu?
+
+target_id=1227342321%26vid%3Dr0018hmh1pa&
+
+timestamp=15&
+
+
+一般连续5个以上，如果这里没有规律的参数基本还是那个是可以进行删除测试的
+
+删除callback=jQuery19107776499041162028_1607088438681发现可以就可以了
+https://mfm.video.qq.com/danmu?otype=json&target_id=1227342321%26vid%3Dr0018hmh1pa&session_key=0%2C0%2C0&timestamp=15&_=1607087251935
+继续精简：
+最终
+https://mfm.video.qq.com/danmu?
+target_id=1227342321
+%26vid%3Dr0018hmh1
+&timestamp=15
+里面还有特殊字符，查url编码表可得，需要自己转义
+page腾讯视频折磨难的吗
+
+
+
+
+
+
+
+
+
+
+
+
+仔细一看，这是啥玩意啊
+思路：开启暴力删除模式
+otype=json&
+callback=jQuery19107073029312526762_1607087251929&
+session_key=0%2C0%2C0&
+_=1607087251935
+
+count: 28
+err_code: 0
+err_msg: "ok"
+peroid: "30"
+session_key: "29649,794,1607088279"
+single_max_count: 794
+target_id: "1227342321"
+tol_up: 29649
+
+count: 28
+err_code: 0
+err_msg: "ok"
+peroid: "30"
+session_key: "29649,794,1607088279"
+single_max_count: 794
+target_id: "1227342321"
+tol_up: 29649
+
+otype: json
+callback: jQuery19107776499041162028_1607088438666
+target_id: 5979258600   &vid=f0034cqed1f
+session_key: 928808,7180,1607088445
+timestamp: 1695
+
+otype: json
+callback: jQuery19107776499041162028_1607088438681
+target_id: 5979258600   &vid=f0034cqed1f
+session_key: 928808,7180,1607088445
+timestamp: 1725
+
+otype: json
+callback: jQuery19107776499041162028_1607088438681
+target_id: 5979258600   &vid=f0034cqed1f
+session_key: 0,0,0
+timestamp: 15
+
+发现 1725-1695 =30
+最开始从15开始

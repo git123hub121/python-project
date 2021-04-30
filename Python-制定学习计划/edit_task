@@ -1,0 +1,10 @@
+<p>Edit plan ID = {{no}}</p>
+<form action="/edit/{{no}}" method="get">
+    <input type="text" name="task" value="{{old[0]}}" size="100" maxlength="100">
+    <select name="status" id="">
+        <option value="">haven't done</option>
+        <option value="">have done</option>
+    </select>
+    <br>
+    <input type="submit" name="save" value="submit">
+</form>

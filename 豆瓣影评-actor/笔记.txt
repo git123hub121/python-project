@@ -1,0 +1,79 @@
+https://movie.douban.com/subject/35163988/comments? start=0  &  limit=20&status=P&sort=new_score 第一页
+
+https://movie.douban.com/subject/35163988/comments? start=20 &  limit=20&status=P&sort=new_score
+
+https://movie.douban.com/subject/35163988/comments? start=40 &  limit=20&status=P&sort=new_score
+
+现在我需要1200条数据，则需要爬取60页
+
+需求1：爬取全部评论 1200条
+需要的数据列---字段
+
+用户名  时间    标星    评论    获赞
+
+1.使用requests库
+2.beautiful解析
+3.csv保存
+4.先不用函数，最后再用函数进行封装
+
+需求2：好评，差评，一般各爬取 400条
+判定标准：好评   6>star>3 一般：star=3 差评：0<star<3
+
+
+<div class="comment">
+<h3>
+<span class="comment-vote">
+<span class="votes vote-count">2620</span>
+<input type="hidden" value="2551512557">
+<a class="j a_show_login" data-id="2551512557" href="javascript:;" onclick="">有用</a>
+<!-- 删除短评 -->
+</input></span>
+<span class="comment-info">
+<a class="" href="https://www.douban.com/people/chunziV5/">海边的西米</a>
+<span>看过</span>
+<span class="allstar40 rating" title="推荐"></span>
+<span class="comment-time" title="2020-10-03 02:37:43">
+                    2020-10-03
+                </span>
+</span>
+</h3>
+<p class="comment-content">
+<span class="short">想看尔冬升骂遍所有想露脸十八线男团idol</span>
+</p>
+</div>
+
+出现报错
+IndexError: list index out of range
+添加了try except    为啥呢？ 还不如用xpath呢
+
+
+太割裂了。\r\r尔冬升才是这季最大惊喜。\r\r充什么样的会员，才可以看
+去除\r
+
+ValueError: arrays must all be same length
+
+ orient='index'
+
+ ValueError: Writing 20 cols but got 5 aliases
+
+ 使用pandas爬取的数据行和列反了，问题应该是数据源的问题
+
+ 爬取过多直接被限制了
+
+ 数据爬取后，评论还带有一些特殊字符，需要自行删除
+
+明天就整理一下今天爬虫遇到的问题以及将其函数化，备考普通话，冲鸭！
+
+AttributeError: '_sre.SRE_Pattern' object has no attribute 'sleep'
+
+有同名time，与模块名冲突，改下名称或者将模块as 其他名称
+
+待解决问题：
+如何将csv最后一个字符去掉
+思路：先直接df[index].replace(",","")，然后
+
+先把所有遇到的问题总结出来，然后进行笔记
+
+raise TooManyRedirects('Exceeded {} redirects.'.format(self.max_redirects), response=resp)
+requests.exceptions.TooManyRedirects: Exceeded 30 redirects.
+靠，遇到了重定向问题，很烦
